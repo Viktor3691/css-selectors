@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Селекторы3</title>
+    <link rel="stylesheet" href="CSS_STL.css">
+<style>
+p, pre {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img {
+    width: 700px;
+}
+
+</style>
+
+</head>
+<body>
+<div class="container">
+        <a href="Селекторы1.html" target="_blank">1</a>
+        <a href="Селекторы2.html" target="_blank">2</a>
+        <a href="Селекторы3.html" target="_blank">3</a>
+        <a href="Селекторы4.html" target="_blank">4</a>
+        <a href="Селекторы5.html" target="_blank">5</a>
+
+        <h1>Селекторы</h1>
+
+        <h2>Тег div для группировки тегов в HTML</h2>
+
+        <pre>В предыдущем уроке мы разобрали тег span, который позволяет как-то выделить кусочек текста. Существует также специальный
+        тег div, который позволяет сгруппировать несколько тегов, чтобы затем сними сделать что-нибудь одновременно.
+
+        Пусть для примера с помощью тегов div мы сгруппируем абзацы:</pre>
+
+        <img src="foto/29.png" alt="29" width="700">
+        <p>Давайте элементам из первой группы назначим красный цвет, а элементам из второй группы - зеленый:</p>
+
+        <img src="foto/30.png" alt="30" width="700">
+
+        <div>
+        <style>
+            .block1 {
+        color: red;
+        }
+        .block2 {
+        color: green;
+        }
+        </style>
+
+        <div class="block1">
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+        </div>
+        <div class="block2">
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+        </div>
+        </div>
+
+        <img src="foto/31.png" alt="31" width="700">
+
+        <div style="color: red;">
+            <h2>Title</h2>
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+        </div>
+
+        <div style="color: green;">
+            <h2>Title</h2>
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+        </div>
+
+        <div style="color: blue;">
+            <h2>Title</h2>
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+        </div>
+
+
+        <img src="foto/32.png" alt="32" width="700">
+
+        <div>
+            <style>
+        .block11 {
+            color: red;
+        }
+
+        .block12 {
+            color: green;
+        }
+
+            </style>
+
+        <div class="block11">
+            <h2>Title</h2>
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+        </div>
+
+
+        <div class="block12">
+            <h2>Title</h2>
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+        </div>
+
+
+        <div class="block11">
+            <h2>Title</h2>
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+        </div>
+
+
+        <div class="block12">
+            <h2>Title</h2>
+            <p>
+                text
+            </p>
+            <p>
+                text
+            </p>
+        </div>
+
+        </div>
+
+        <h2>Группировка классов в CSS</h2>
+
+        <p>Пусть у нас есть несколько классов, которые красят элементы в разные цвета:</p>
+
+        <img src="foto/33.png" alt="33" width="700">
+
+        <p>Пусть мы хотим сделать так, чтобы эти классы кроме цвета, задавали еще и размер шрифта:</p>
+
+        <img src="foto/33.png" alt="33" width="700">
+        <p>Так как оба класса задают одинаковый размер шрифта, давайте используем группировку селекторов следующим образом:</p>
+
+        <img src="foto/34.png" alt="34" width="700"><br>
+
+        <img src="foto/35.png" alt="35" width="700">
+        <br>
+        .eee {<br>
+        font-size: 20px;<br>
+        }<br>
+        .zzz {<br>
+        font-size: 30px;<br>
+        }<br>
+        <br>
+        .eee, .zzz {<br>
+        line-height: 1.5;<br>
+        font-family: Arial;<br>
+        }<br>
+
+        <div1>
+        <style>
+        .eee {
+            font-size: 20px;
+        }
+        .zzz {
+            font-size: 30px;
+        }
+
+        .eee, .zzz {
+            line-height: 1.5;
+            font-family: Arial;
+            color: blue;
+        }
+        </style>
+
+        <p class="eee" >Группировка классов в CSS</p>
+        <p class="zzz">Группировка классов в CSS</p>
+        </div1>
+
+        <img src="foto/36.png" alt="36" width="700">
+
+
+        <div>
+        <style>
+        .eeee {
+        font-size: 20px;
+        }
+        .zzzz {
+        font-size: 30px;
+        }
+        .gggg {
+        font-size: 35px;
+        }
+
+        .eeee, .zzzz,  .gggg {
+        text-align: center;
+        font-family: Arial;
+        color:darkmagenta
+        }
+        </style>
+
+        </div>
+
+        <pre>.eeee {
+        font-size: 20px;
+        }
+        .zzzz {
+        font-size: 30px;
+        }
+        .gggg {
+        font-size: 35px;
+        }
+
+        .eeee, .zzzz, .gggg {
+        text-align: center;
+        font-family: Arial;
+        }</pre>
+
+        <p class="eeee">Упростите код, используя группировку селекторов:</p>
+        <p class="zzzz">Упростите код, используя группировку селекторов:</p>
+        <p class="gggg">Упростите код, используя группировку селекторов:</p>
+
+
+
+
+
+        <a href="Селекторы1.html" target="_blank"> 1 </a>
+        <a href="Селекторы2.html" target="_blank"> 2 </a>
+        <a href="Селекторы3.html" target="_blank"> 3 </a>
+        <a href="Селекторы4.html" target="_blank"> 4 </a>
+        <a href="Селекторы5.html" target="_blank"> 5 </a>
+
+</div>
+</body>
+</html>

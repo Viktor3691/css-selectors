@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Селекторы</title>
+    <link rel="stylesheet" href="CSS_STL.css">
+<style>
+p, pre {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 700px;
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+
+<a href="Селекторы1.html" target="_blank">1</a>
+<a href="Селекторы2.html" target="_blank">2</a>
+<a href="Селекторы3.html" target="_blank">3</a>
+<a href="Селекторы4.html" target="_blank">4</a>
+<a href="Селекторы5.html" target="_blank">5</a>
+<h1>Селекторы5</h1>
+
+<h2>Сложные комбинации селектора потомков и классов в CSS</h2>
+
+<p>Пусть теперь у нас есть следующий код:</p>
+
+<img src="foto/49.png" alt="49">
+
+<pre>Давайте найдем все элементы с классом header, находящиеся внутри элемента с классом block, и зададим им шрифт Arial:</pre>
+
+<img src="foto/50.png" alt="50">
+
+<div>
+    <style>
+.block .header {
+	font-family: Arial;
+}
+    </style>
+
+<div class="block">
+    <h2 class="header">Title h2</h2>
+    <p>
+        text
+    </p>
+
+    <h3 class="header">Title h3</h3>
+    <p>
+        text
+    </p>
+    <p>
+        text
+    </p>
+</div>
+<div class="block">
+    <h2 class="header">Title h2</h2>
+    <p>
+        text
+    </p>
+
+    <h3 class="header">Title h3</h3>
+    <p>
+        text
+    </p>
+    <p>
+        text
+    </p>
+</div>
+</div>
+
+<pre>Как видно в HTML коде, внутри элемента с классом block элементы с классом header могут быть как заголовками h2, так и
+заголовками h3. Давайте напишем селекторы, отличающие эти заголовки, и что-нибудь сделаем с этими заголовками.
+
+Давайте выберем все h2 с классом header, находящиеся внутри элемента с классом block:</pre>
+
+<img src="foto/51.png" alt="51">
+<pre>А теперь выберем все h3 с классом header, находящиеся внутри элемента с классом block:</pre>
+
+<img src="foto/52.png" alt="52">
+
+
+<div>
+    <style>
+        .block1 h2.header {
+            font-family: Arial;
+            font-style: 30px;
+            color: red;
+        }
+
+.block1 h3.header {
+	font-size: 20px;
+	color: green;
+}
+
+    </style>
+
+    <div class="block1">
+        <h2 class="header">Title h2</h2>
+        <p>
+            text
+        </p>
+
+        <h3 class="header">Title h3</h3>
+        <p>
+            text
+        </p>
+        <p>
+            text
+        </p>
+    </div>
+    <div class="block1">
+        <h2 class="header">Title h2</h2>
+        <p>
+            text
+        </p>
+
+        <h3 class="header">Title h3</h3>
+        <p>
+            text
+        </p>
+        <p>
+            text
+        </p>
+    </div>
+</div>
+<hr>
+
+<img src="foto/53.png" alt="53">
+
+<div class="block3">
+<style>
+.eee1 p, .bbb1 p   {
+color: red;
+}
+</style>
+
+<div class="eee1">
+    <p>text</p>
+</div>
+
+
+
+<div class="bbb1">
+    <p>text</p>
+</div>
+
+</div>
+
+<img src="foto/54.png" alt="54">
+
+<div class="block4">
+    <style>
+        .eee2 p,
+        .bbb1 p {
+            color: red;
+        }
+
+        .eee2 h2 {
+	color: chocolate;
+}
+    </style>
+
+    <div class="eee2">
+        <h2>текст</h2>
+    </div>
+
+    <div class="eee2">
+        <p>text</p>
+    </div>
+
+
+
+    <div class="bbb1">
+        <p>text</p>
+    </div>
+
+</div>
+
+<h2>Ошибка новичков в селекторе потомков</h2>
+
+<p>Посмотрите на следующий селектор:</p>
+
+<img src="foto/55.png" alt="55">
+
+<p>Вы уже должны знать, что такой селектор выберет абзацы с классом eee. Например, вот эти:</p>
+
+<img src="foto/56.png" alt="56">
+
+<p>Посмотрите теперь вот на этот селектор:</p>
+
+<img src="foto/57.png" alt="57">
+
+<pre>Это селектор отличается от предыдущего тем, что у него между именем тега и именем класса стоит пробел. Этот пробел
+представляет собой селектор потомков. То есть в данном случае мы выбираем все элементы с классом eee, находящиеся внутри
+абзацев. Например, этот селектор выберет следующие спены:</pre>
+
+<img src="foto/58.png" alt="58">
+
+<p>Результат выполнения кода:</p>
+
+
+<div>
+
+<style>
+p .eee {
+	color: green;
+}
+</style>
+
+<p>
+    lorem <span class="eee">ipsum</span>
+</p>
+<p>
+    lorem <span class="eee">ipsum</span>
+</p>
+</div>
+
+<pre>Это селектор отличается от предыдущего тем, что у него между именем тега и именем класса стоит пробел. Этот пробел
+представляет собой селектор потомков. То есть в данном случае мы выбираем все элементы с классом eee, находящиеся внутри
+абзацев. Например, этот селектор выберет следующие спены:</pre>
+
+<img src="foto/59.png" alt="59"><br>
+
+<img src="foto/60.png" alt="60"><br>
+
+<img src="foto/61.png" alt="61">
+
+<div class="block1">
+
+    <style>
+      .block1,  p.bbbb {
+            color: red;
+        }
+    </style>
+
+    <p>
+        lorem <span class="bbbb">proba1</span>
+    </p>
+    <p>
+        lorem <span class="bbbb">proba1</span>
+    </p>
+</div>
+<hr>
+
+<div class="block2">
+
+    <style>
+        .block2  p  .bbbb {
+            color: blue;
+        }
+    </style>
+
+    <p>
+        lorem <span class="bbbb">proba2</span>
+    </p>
+    <p>
+        lorem <span class="bbbb">proba2</span>
+    </p>
+</div>
+<hr>
+
+<div class="block3">
+
+    <style>
+        .block3,  .eeee,  p.bbbb {
+            color: rgb(179, 255, 0);
+        }
+    </style>
+
+    <p>
+        lorem <span class="bbbb">proba3</span>
+    </p>
+    <p>
+        lorem <span class="eeee">proba3</span>
+    </p>
+</div>
+<hr>
+
+<h2>Элемент с несколькими CSS классами</h2>
+
+<pre>Можно одновременно задать несколько CSS классов какому-нибудь тегу. Для этого в атрибуте class эти классы нужно
+перечислить через пробел.
+
+Давайте посмотрим на примере. Пусть у нас есть несколько CSS классов:</pre>
+
+<img src="foto/62.png" alt="62">
+
+<div class="block4">
+    <style>
+.error {
+	color: red;
+}
+.large {
+	font-size: 30px;
+	font-family: Arial;
+}
+    </style>
+<p class="error large">
+    proba4
+</p>
+</div>
+
+<img src="foto/63.png" alt="63">
+
+
+<div class="block5">
+<style>
+
+.success {
+	color: green;
+}
+.error {
+	color: red;
+}
+.large {
+	font-size: 30px;
+}
+.small {
+	font-size: 20px;
+}
+
+</style>
+Пусть у вас также есть 4 абзаца. С помощью представленных классов сделайте так, чтобы первый абзац был зеленый и с
+большим шрифтом, второй абзац - красным и с маленьким шрифтом, третий абзац - красным и с большим шрифтом, а четвертый -
+зеленым и с маленьким шрифтом.
+
+<p class="success">первый абзац был зеленый</p>
+<p class="error">второй абзац - красным</p>
+<p class="large ">третий абзац - красным</p>
+<p class="small"></p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+<a href="Селекторы1.html" target="_blank">1</a>
+<a href="Селекторы2.html" target="_blank">2</a>
+<a href="Селекторы3.html" target="_blank">3</a>
+<a href="Селекторы4.html" target="_blank">4</a>
+<a href="Селекторы5.html" target="_blank">5</a>
+</div>
+</body>
+</html>

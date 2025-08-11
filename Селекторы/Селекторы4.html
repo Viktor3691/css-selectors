@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Селекторы</title>
+    <link rel="stylesheet" href="CSS_STL.css">
+<style>
+p, pre {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 700px;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+
+        <a href="Селекторы1.html" target="_blank">1</a>
+        <a href="Селекторы2.html" target="_blank">2</a>
+        <a href="Селекторы3.html" target="_blank">3</a>
+        <a href="Селекторы4.html" target="_blank">4</a>
+        <a href="Селекторы5.html" target="_blank">5</a>
+
+        <h1>Селекторы4</h1>
+
+        <h2>Тег с заданным классом в CSS</h2>
+
+        <pre>Пусть у нас есть два типа тегов с одинаковыми классами. Например, пусть и заголовки h2, и абзацы имеют один и тот же
+        класс:</pre>
+
+        <img src="foto/37.png" alt="37" width="700">
+
+        <p>Мы можем, к примеру, покрасить все элементы с таким классом в красный цвет:</p>
+
+        <img src="foto/38.png" alt="38" width="700">
+        <pre>Можно, однако, обратиться к конкретному тегу с классом. К примеру, можно выбрать все h2 с классом eee и отдельно выбрать
+        все p с этим классом.
+
+        Для этого в селекторе нужно написать имя тега, а затем слитно имя класса. Давайте, например, покрасим h2 с нашим классом
+        в красный цвет, а абзацы с таким классом - в зеленый:</pre>
+
+        <img src="foto/39.png" alt="39" width="700">
+        <br>
+        <img src="foto/40.png" alt="40" width="700">
+
+        <div>
+        <style>
+        .header {
+        color: red;
+        }
+        h2.header {
+        width: 40px;
+        }
+        h3.header {
+        width: 30px;
+        }
+        </style>
+        </div>
+
+        <pre>.header {
+        color: red;
+        }
+        h2.header {
+        width: 40px;
+        }
+        h3.header {
+        width: 30px;
+        }</pre>
+
+
+        <h2>Селектор потомков и классы в CSS</h2>
+
+        <p>Пусть у нас есть следующий код:</p>
+
+        <img src="foto/41.png" alt="41" width="700">
+
+
+        <div class="block">
+            <h2>Title</h2>
+            <p>
+                text
+            </p>
+        </div>
+
+        <div class="block">
+            <h2>Title</h2>
+            <p>
+                text
+            </p>
+        </div>
+
+        <pre>Давайте выберем все заголовки h2 и абзацы, находящиеся внутри элемента с классом block, и покрасим их в разные цвета.
+        Используем для этого селектор потомков (который пробел между селекторами):</pre>
+
+        <img src="foto/42.png" alt="42" width="700">
+
+        <div>
+        <style>
+            .block1 h2 {
+            color: red;
+        }
+        .block1 p {
+            color: green;
+        }
+        </style>
+
+        <div class="block1">
+            <h2>Title</h2>
+            <p>
+                text
+            </p>
+        </div>
+
+        <div class="block1">
+            <h2>Title</h2>
+            <p>
+                text
+            </p>
+        </div>
+        </div>
+
+        <img src="foto/43.png" alt="43" width="700">
+
+
+        <div>
+
+        <style>
+        .eee9 i {
+            color: red;
+        }
+
+        </style>
+
+        <p class="eee9">
+            text <i>italic</i>
+        </p>
+        <p class="eee9">
+            text <i>italic</i>
+        </p>
+        <div class="eee9">
+            text <i>italic</i>
+        </div>
+        <div class="eee9">
+            text <i>italic</i>
+        </div>
+
+        </div>
+
+        <img src="foto/44.png" alt="44">
+
+
+
+        <div id="div1">
+        <style>
+        p b i {
+            color: red;
+        }
+
+        </style>
+
+        <p>
+            paragraph text <b><i>bold italic</i></b>
+        </p>
+        <p>
+            paragraph text <i>italic</i>
+        </p>
+
+        </div>
+
+        <h2>Дочерний селектор в CSS</h2>
+
+        <p>Пусть у нас есть следующий код:</p>
+
+        <img src="foto/45.png" alt="45">
+        <p>Пусть мы хотим выбрать все теги i, являющиеся потомками абзацев. Сделаем это:</p>
+
+        <img src="foto/46.png" alt="46">
+
+        <div id="div2">
+        <style>
+        p i {
+            color: red;
+        }
+        </style>
+
+        <p>
+            text <b><i>bold italic</i></b>
+        </p>
+        <p>
+            text <i>just italic</i>
+        </p>
+        </div>
+
+        <pre>Давайте теперь выберем те теги i, которые являются непосредственными потомками наших абзацев. В этом нам поможет
+        дочерний селектор .
+
+        Чтобы понять, как им пользоваться, давайте сравним его с селектором потомков. Вот так: p i - мы выберем все курсивы
+        внутри абзацев, а вот так: p  i - только курсивы, являющиеся непосредственными потомками абзацев.
+
+        Давайте применим этот селектор к нашему HTML коду:</pre>
+
+        <img src="foto/47.png" alt="47">
+
+        <div class="div3">
+
+        <p>
+            text <b><i  style="color: red;">bold italic</i></b>
+        </p>
+        <p>
+            text <i>just italic</i>
+        </p>
+
+        </div>
+
+        <img src="foto/48.png" alt="48">
+
+
+        <br><br><br>
+        <a href="Селекторы1.html" target="_blank">1</a>
+        <a href="Селекторы2.html" target="_blank">2</a>
+        <a href="Селекторы3.html" target="_blank">3</a>
+        <a href="Селекторы4.html" target="_blank">4</a>
+        <a href="Селекторы5.html" target="_blank">5</a>
+
+</div>
+</body>
+</html>

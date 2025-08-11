@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Селекторы2</title>
+    <link rel="stylesheet" href="CSS_STL.css">
+<style>
+p, pre {
+font-family: 'Times New Roman', Times, serif;
+
+}
+
+img {
+    width: 700px;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+
+        <a href="Селекторы1.html" target="_blank">1</a>
+        <a href="Селекторы2.html" target="_blank">2</a>
+        <a href="Селекторы3.html" target="_blank">3</a>
+        <a href="Селекторы4.html" target="_blank">4</a>
+        <a href="Селекторы5.html" target="_blank">5</a>
+
+        <h1>Селекторы</h1>
+
+        <h2>Классы элементов в CSS</h2>
+        <pre>В предыдущих уроках мы выбирали элементы страницы по имени тега, задавая стили, к примеру, одновременно всем абзацам. На
+        странице, однако, могут быть абзацы разных типов, к которым нужно применять разные стили. Для решения такой проблемы
+        можно разные абзацы отнести к разным CSS классам.
+
+        Чтобы отнести тег какому-нибудь классу, нужно этому тегу написать атрибут class, а в нем - придуманное вами название
+        класса, состоящее из букв, цифр, символов подчеркивания и дефиса.
+
+        Давайте посмотрим на примере. Сделаем абзацы с двумя типами классов - eee и zzz:</pre>
+
+        <img src="foto/21.png" alt="21" width="700">
+
+        <div 1>
+        <p class="kkk">
+            paragraph with class eee
+        </p>
+        <p class="kkk">
+            paragraph with class eee
+        </p>
+        <p class="kkk">
+            paragraph with class zzz
+        </p>
+        <p class="kkk">
+            paragraph with class zzz
+        </p>
+        </div>
+
+
+
+        <pre>Давайте теперь обратимся в CSS к абзацам с различными классами и зададим им какие-нибудь стили. К примеру, покрасим
+        абзацы с классом zzz в красный цвет, а абзацы с классом eee - в зеленый.
+
+        Для этого в CSS файле нужно обратиться к нашим классам. Обращение имеет следующий синтаксис: сначала идет символ точка,
+        а затем придуманное нами имя класса. То есть для обращения к классу eee нужно написать .eee, а для класса zzz - написать
+        .zzz.
+
+        Итак, сделаем описанное. Добавим к нашему HTML еще и CSS стили для введенных нами классов:</pre>
+        <img src="foto/22.png" alt="22" width="700">
+
+
+        <div 2>
+        <style>
+            .eee {
+            color: green;
+        }
+        .zzz {
+            color: red;
+        }
+        </style>
+        <p class="eee">
+            paragraph with class eee
+        </p>
+        <p class="eee">
+            paragraph with class eee
+        </p>
+        <p class="zzz">
+            paragraph with class zzz
+        </p>
+        <p class="zzz">
+            paragraph with class zzz
+        </p>
+
+        </div>
+
+        <img src="foto/23.png" alt="23" width="700">
+
+        <div>
+        <style>
+        .odd {
+            color: red;
+        }
+        .eve {
+            color: green;
+        }
+        </style>
+
+        <ul>
+            <li class="odd">text</li>
+            <li class="eve">text</li>
+            <li class="odd">text</li>
+            <li class="eve">text</li>
+            <li class="odd">text</li>
+            <li class="eve">text</li>
+        </ul>
+
+        </div>
+
+        <img src="foto/24.png" alt="24" width="700">
+
+        <div>
+            <style>
+        .eee1 {
+        color: red;
+        }
+
+            </style>
+
+        <h2 class="eee1">Title</h2>
+        <p class="eee1">
+            paragraph
+        </p>
+        <p class="eee1">
+            paragraph
+        </p>
+        <p>
+            paragraph without class
+        </p>
+
+        <ul class="eee1">
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+        </ul>
+        Покрасьте в красный цвет все элементы с классом eee.
+        </div>
+
+        <h2>Тег span для кусочков текста в HTML</h2>
+
+        <pre>Вы уже знаете, что для того, чтобы сделать некоторый кусочек текста, к примеру, жирным - следует использовать тег b.
+        Однако, что делать, если я хочу покрасить кусочек текста в красный цвет? Для такого случая тега, подобного тегу b, не
+        существует.
+
+        Зато существует специальный тег span - сам по себе он абсолютно ничего не делает, но для него можно применить CSS стили,
+        которые позволят нам добавить нужный эффект к кусочку текста.
+
+        Давайте посмотрим на примере. Пусть у нас есть какой-то текст:</pre>
+
+        <img src="foto/25.png" alt="25" width="700">
+        <p>
+            This is a paragraph with text.
+        </p>
+        <pre>Пусть мы хотим слово "текст" сделать красным. Для этого обернем этот кусочек текста в тег span и этому тегу дадим
+        какой-нибудь класс:</pre>
+
+        <img src="foto/26.png" alt="26" width="700">
+
+        <p>
+            This is a paragraph with <span class="red">text</span>.
+        </p>
+        <p>Ну а теперь покрасим элемент с таким классом в красный цвет:</p>
+        <img src="foto/27.png" alt="27" width="700">
+
+
+
+        <div>
+        <style>
+        .red1 {
+            color: red;
+        }</style>
+        <p>
+            This is a paragraph with <span class="red1">text</span>.
+        </p>
+        </div>
+
+        <img src="foto/28.png" alt="28" width="700">
+
+        <div>
+        <style>
+        .xxx {
+            font-size: 30px;
+        }
+        </style>
+
+        <p>
+            Lorem ipsum <span class="xxx">dolor sit</span> amet.
+        </p>
+        <p>
+            <span class="xxx">Lorem ipsum</span> dolor sit amet.
+        </p>
+        Сделайте элементы с классом xxx размером в 30px.
+
+        </div>
+
+
+
+        <a href="Селекторы1.html" target="_blank">1</a>
+        <a href="Селекторы2.html" target="_blank">2</a>
+        <a href="Селекторы3.html" target="_blank">3</a>
+        <a href="Селекторы4.html" target="_blank">4</a>
+        <a href="Селекторы5.html" target="_blank">5</a>
+</div>
+</body>
+</html>
